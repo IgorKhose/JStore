@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JStore - layout</title>
+   <link href="static/css/bootstrap.css" rel="stylesheet" >
+    <link href="static/css/bootstrap-theme.css" rel="stylesheet" >
+    <link href="static/css/font-awesome.css" rel="stylesheet" >
+    <link href="static/css/app.css" rel="stylesheet" > 
+  </head>
+  <body>
+   <header>
+     <nav class="navbar navbar-default">
+     	<div class="container-fluid">
+     		<div class="navbar-header">
+     			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#jstoreNav" aria-expanded="false">
+     				<span class="sr-only">Toggle Nav</span>
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     			</button>
+     			<a class="navbar-brand" href="index.html">JStore</a>
+     		</div>
+     		<div class="collapse navbar-collapse" id="jstoreNav">
+     			<ul id="currentShoppingCart" class="nav navbar-nav navbar-right hidden">
+     				<li class="dropdown">
+     					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+     						Shoping cart(<span class="total-count">0</span>)
+     						<span class="caret"></span></a>
+     					<div class="dropdown-menu shopping-cart-desc">
+     					 	Total count: <span class="total-count">0</span><br>
+     					 	Total cost: <span class="total-cost">0</span><br>
+     					 	<a href="shopping-cart.html" class="btn btn-info btn-block">View cart</a>
+     					</div>
+     				</li>
+     			</ul>
+     			<a href="#" class="btn btn-info navbar-btn navbar-right sing-in"><i class="fa fa-twitter" aria-hidden="true"></i> Sign In</a>
+     		</div>
+     	</div>
+     </nav>
+   </header>
+<div class="conteiner-fluid">
+  <div class="row">
+    <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+    <div class="visible-xs-block xs-option-container">
+    	<a class="pull-right" data-toggle="collapse" href="#productCatalogue">Product catalogue<span class="caret"></span></a>
+    	<a data-toggle="collapse" href="#findProducts">Find products<span class="caret"></span></a>
+    </div>
+
+      <!--Search Form-->
+      <form class="search" action="index.html">
+      <div id="findProducts" class="panel panel-info collapse">
+      	<div class="panel-heading">Find products</div>
+      	<div class="panel-body">
+      	 <div class="input-group">
+  <input type="text" name="query" class="form-control" 
+            placeholder="Search query">
+  <span class="input-group-btn">
+  	<a id="goSearch" class="btn btn-default">Go!</a>
+  </span>
+       </div>
+              <div class="more-options">
+              	<a data-toggle="collapse" href="#searchOptions">
+    More filters<span class="caret"></span>
+                </a>
+              </div>
+	      	</div>
+	      	<div id="searchOptions" class="collapse">
+	      		<div class="panel-heading">Filter by categories</div>
+      	        <div class="panel-body categories">
+      	        <label><input type="checkbox" id="allCategories"> All </label>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="1" class="search-option">Smarthpones (8)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="2" class="search-option">Tablets (4)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="3" class="search-option">Laptops (4)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="4" class="search-option">Headphones (6)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="5" class="search-option">Game consoles (8)</label>
+      	              	</div>
+      	              </div>
+      	        </div>
+      	        <div class="panel-heading">Filter by brands</div>
+      	        <div class="panel-body brands">
+      	        	<label><input type="checkbox" id="allBrands"> All </label>
+      	        	<div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="1" class="search-option">Apple</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="2" class="search-option">Blackberry</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="3" class="search-option">Google</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="4" class="search-option">Microsoft</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="5" class="search-option">Nintendo</label>
+      	              	</div>
+      	              </div>
+                      <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="6" class="search-option">OnePlus</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="7" class="search-option">Samsung</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="8" class="search-option">Sony</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="9" class="search-option">Yandex</label>
+      	              	</div>
+      	              </div>
+      	        </div>
+	      	</div>
+	      </div>
+      </form>
+      <!-- /Search Form-->
+      <!-- Categories-->
+      <div id="productCatalogue" class="panel panel-info collapse">
+      	<div class="panel-heading">Product catalogue</div>
+      		<div class="list-group">
+			  <a href="#" class="list-group-item">
+			    <span class="badge">8</span>Smartphones
+			  </a>
+			  <a href="#" class="list-group-item">
+			  	<span class="badge">4</span>Tablets</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">4</span>Laptops</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">6</span>Headphones</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">6</span>Game Consoles</a>
+      	</div>
+      </div>
+      <!-- /Categories-->
+    </aside>
+    <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+      <div id="productList">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1234" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/iphone11.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 6.1" / Camera 12Mp / Capacity 64Gb / Face ID / Chip A13 Bionic / Battery Up to 17 hours/ Weight 194 g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">iPhone 11</h4>
+                <div class="code">Code: 27011</div>
+                <div class="price"> $ 699.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1234">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Apple</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1235" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/galaxys20.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 6.2" / Camera 64Mp / Capacity 128Gb/ Fingerprint ID / Chip Exynos 990
+ / Battery 4000mAh / Weight 163g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Samsung Galaxy S20</h4>
+                <div class="code">Code: 27012</div>
+                <div class="price"> $ 749.95</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1235">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Samsung</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1236" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/iphone11pro.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 5.8" / Camera 12Mp / Capacity 64Gb / Face ID / Chip A13 Bionic / Battery Up to 18 hours / Weight 188g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">iPhone 11 Pro</h4>
+                <div class="code">Code: 27013</div>
+                <div class="price"> $ 999.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1236">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Apple</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1237" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/galaxys10+.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 6.4" / Camera 12Mp / Capacity 128Gb/ Touch ID / Chip Exynos 9820
+ / Battery 4100mAh/ Weight 175g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Samsung Galaxy S10+</h4>
+                <div class="code">Code: 27014</div>
+                <div class="price"> $ 699.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1237">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Samsung</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div> 
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1238" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/pixel4xl.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 6.3" / Camera 16Mp / Capacity 64Gb/ Motion ID / Chip QS 855/ Battery 3700mAh/ Weight 193g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Google Pixel 4 XL</h4>
+                <div class="code">Code: 27015</div>
+                <div class="price"> $ 899.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1238">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Google</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product1239" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/yandex.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 5.65" / Camera 16Mp / Capacity 64Gb/ Touch ID / Chip QS 630/ Battery 2970mAh/ Weight 163g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Yandex Phone</h4>
+                <div class="code">Code: 27016</div>
+                <div class="price"> $ 89.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="1239">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Yandex</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12310" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/oneplus.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 6.67" / Camera 48Mp / Capacity 128Gb / Touch ID / Chip QS 855/ Battery 4000mAh / Weight 206g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">One Plus 7 Pro</h4>
+                <div class="code">Code: 27017</div>
+                <div class="price"> $ 599.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12310">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">One Plus</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12311" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/blackberry.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 4.48" / Camera 12Mp / Capacity 32Gb / Touch ID / Chip QS 625/ Battery 3505mAh / Weight 183g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">BlackBerry KeyOne</h4>
+                <div class="code">Code: 27018</div>
+                <div class="price"> $ 395.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12311">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Blackberry</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12312" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/ipadpro.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 11" / Screen Resolution 2338 x 1668 / Capacity 128Gb / Face ID / Chip A12Z Bionic / Battery Up to 10 hours / Weight 473g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">iPad Pro 11‑inch</h4>
+                <div class="code">Code: 27019</div>
+                <div class="price"> $ 799.00</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12312">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Tablet</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Apple</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12313" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/surfacepro.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 12.3" / Screen Resolution 2736 x 1824 / Capacity 128Gb / Facial recognition / Chip Intel 10th Generation Core i5 / Battery Up to 10.5 hours / Weight 454g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Microsoft Surface Pro 7</h4>
+                <div class="code">Code: 27020</div>
+                <div class="price"> $ 1058.99</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12313">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Smartphone</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Apple</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12314" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/tabs6.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 10.5" / Screen Resolution 2560 х 1600 / Capacity 128Gb / Fingerprint Scanner / Chip QS 855 / Battery 7040mAh / Weight 420g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">Samsung Galaxy Tab S6</h4>
+                <div class="code">Code: 27021</div>
+                <div class="price"> $ 549.99</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12314">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Tablets</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Samsung</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xlg-2">
+            <!-- Product Data-->
+            <div id="product12315" class="panel panel-default product">
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <img src="media/ipad.jpg" alt="ProductName">
+                  <div class="desc">
+                    <div class="cell">
+                      <p><span class="title"> Details</span>Display 10.2" / Screen Resolution 2160 х 1620 / Capacity 128Gb / Touch ID / Chip A10 Fusion / Battery Up to 10 hours / Weight 483g </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="name">iPad</h4>
+                <div class="code">Code: 27022</div>
+                <div class="price"> $ 329.99</div>
+                <a class="btn btn-primary pull-right buy-btn" data-id-product="12315">Buy</a>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <small>Category:</small>
+                      <span class="category">Tablets</span></li>
+                    <li class="list-group-item">
+                      <small>Brand: </small>
+                      <span class="manufactory">Apple</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center hidden-print">
+        	<img id="loadMoreIndicator" src="static/img/loading.gif" class="hidden" alt="Loading ...">
+         <a id="loadMore" class="btn btn-info">Load more products</a>
+        </div>
+      </div>
+<div id="addProductPopup" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add product to Shopping cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body row">
+      	<div class="col-xs-12 col-sm-6">
+      		<div class="thumbnail">
+      			<img class="product-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="product image">
+      		</div>
+      	</div>
+        <div class="col-xs-12 col-sm-6">
+          <h4 class="name text-center">Name</h4>
+          <div class="list-group hidden-xs adv-chars">
+            <span class="list-group-item"><small>Category:</small><span class="category">?</span></span>
+             <span class="list-group-item"><small>Brand:</small><span class="manufactory">?</span></span>
+         </div>
+         <div class="list-group">
+              <span class="list-group-item"><small>Price:</small><span class="price">0</span></span>
+              <span class="list-group-item"><small>Count:</small><input type="number" class="count" value="1" min="1" max="10"></span>  
+              <span class="list-group-item"><small>Cost:</small><span class="cost">0</span></span>   
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer"> 
+      	<img id="addToCartIndicator" src="static/img/loading.gif" class="hidden" alt="Loading ...">
+        <button id="addToCart" type="button" class="btn btn-primary">Add to cart</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+  </div>
+</div>
+   <footer class="footer">
+     <div class="container">
+     	<p class="text-center">JStore demo 2020</p>
+     </div>
+   </footer>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+</html>

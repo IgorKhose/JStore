@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JStore - layout</title>
+   <link href="static/css/bootstrap.css" rel="stylesheet" >
+    <link href="static/css/bootstrap-theme.css" rel="stylesheet" >
+    <link href="static/css/font-awesome.css" rel="stylesheet" >
+    <link href="static/css/app.css" rel="stylesheet" > 
+  </head>
+  <body>
+   <header>
+     <nav class="navbar navbar-default">
+     	<div class="container-fluid">
+     		<div class="navbar-header">
+     			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#jstoreNav" aria-expanded="false">
+     				<span class="sr-only">Toggle Nav</span>
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     			</button>
+     			<a class="navbar-brand" href="index.html">JStore</a>
+     		</div>
+     		<div class="collapse navbar-collapse" id="jstoreNav">
+     			<a href="#" class="btn btn-info navbar-btn navbar-right sing-in"><i class="fa fa-twitter" aria-hidden="true"></i> Sign In</a>
+     		</div>
+     	</div>
+     </nav>
+   </header>
+<div class="conteiner-fluid">
+  <div class="row">
+    <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+    <div class="visible-xs-block xs-option-container">
+    	<a class="pull-right" data-toggle="collapse" href="#productCatalogue">Product catalogue<span class="caret"></span></a>
+    	<a data-toggle="collapse" href="#findProducts">Find products<span class="caret"></span></a>
+    </div>
+
+      <!--Search Form-->
+      <form action="index.html">
+      <div id="findProducts" class="panel panel-info collapse">
+      	<div class="panel-heading">Find products</div>
+      	<div class="panel-body">
+      	 <div class="input-group">
+  <input type="text" name="query" class="form-control" 
+            placeholder="Search query">
+  <span class="input-group-btn">
+  	<a id="goSearch" class="btn btn-default">Go!</a>
+  </span>
+       </div>
+              <div class="more-options">
+              	<a data-toggle="collapse" href="#searchOptions">
+    More filters<span class="caret"></span>
+                </a>
+              </div>
+	      	</div>
+	      	<div id="searchOptions" class="collapse">
+	      		<div class="panel-heading">Filter by categories</div>
+      	        <div class="panel-body categories">
+      	        <label><input type="checkbox" name="allCategories"> All 
+      	              </label>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="1" class="search-option">Smarthpones (8)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="2" class="search-option">Tablets (4)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="3" class="search-option">Laptops (4)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="4" class="search-option">Headphones (6)</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="category" value="5" class="search-option">Game consoles (8)</label>
+      	              	</div>
+      	              </div>
+      	        </div>
+      	        <div class="panel-heading">Filter by brands</div>
+      	        <div class="panel-body brands">
+      	        	<div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="1" class="search-option">Apple</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="2" class="search-option">Blackberry</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="3" class="search-option">Google</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="4" class="search-option">Microsoft</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="5" class="search-option">Nintendo</label>
+      	              	</div>
+      	              </div>
+                      <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="6" class="search-option">OnePlus</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="7" class="search-option">Samsung</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="8" class="search-option">Sony</label>
+      	              	</div>
+      	              </div>
+      	              <div class="form-group">
+      	              	<div class="checkbox">
+      	              		<label><input type="checkbox" name="brands" value="9" class="search-option">Yandx</label>
+      	              	</div>
+      	              </div>
+      	        </div>
+	      	</div>
+	      </div>
+      </form>
+      <!-- /Search Form-->
+      <!-- Categories-->
+      <div id="productCatalogue" class="panel panel-info collapse">
+      	<div class="panel-heading">Product catalogue</div>
+      		<div class="list-group">
+			  <a href="#" class="list-group-item">
+			    <span class="badge">8</span>Smartphones
+			  </a>
+			  <a href="#" class="list-group-item">
+			  	<span class="badge">4</span>Tablets</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">4</span>Laptops</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">6</span>Headphones</a>
+			  <a href="#" class="list-group-item">
+			    <span class="badge">6</span>Game Consoles</a>
+      	</div>
+      </div>
+      <!-- /Categories-->
+    </aside>
+    <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+      <div id="shoppingCart">
+        <div class="alert alert-warning hidden-print" role="alert">Please, sing in to make an order</div>
+          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Count</th>
+      <th class="hidden-print">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="product1234" class="item">
+        <td class="text-center"><img src="media/iphone11.jpg" alt="ProductName"><br>iPhone 11</td>
+        <td class="price">$ 699.00</td>
+        <td class="count">1</td>
+        <td class="hidden-print">
+          <a class="btn btn-danger remove-product" data-id-product="1234" data-count="1">Remove one</a>
+        </td>
+      </tr>
+      <tr id="product1235" class="item">
+        <td class="text-center"><img src="media/galaxys20.jpg" alt="ProductName"><br>Samsung Galaxy S20</td>
+        <td class="price">$ 749.95</td>
+        <td class="count">2</td>
+        <td class="hidden-print">
+          <a class="btn btn-danger remove-product" data-id-product="1235" data-count="1">Remove one</a><br><br>
+          <a class="btn btn-danger remove-product all" data-id-product="1235" data-count="2">Remove all</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="tetx-right"><strong>Total:</strong></td>
+        <td colspan="2" class="total">$1448.95</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row hidden-print">
+    <div class="col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+<a class="btn btn-info btn-block"><i class="fa fa-twitter" aria-hidden="true"></i> Sign in</a>
+        </div>
+       </div>
+      </div>
+    </main>
+  </div>
+</div>
+   <footer class="footer">
+     <div class="container">
+     	<p class="text-center">JStore demo 2020</p>
+     </div>
+   </footer>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+</html>
